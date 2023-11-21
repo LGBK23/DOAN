@@ -1,39 +1,48 @@
 @extends('ADMIN/index')
 @section('content')
+<html>
+
+
+<form method="POST" action="{{route('SIZE.xl-them')}}">
+	@csrf
+	<div class="row">
+		<div class="col-lg-12 col-md-12">
+			<div class="card">
+				<div class="card-header border-bottom">
+					<h4 class="mb-0">Thêm mới</h4>
+				</div>
+				<div class="card-body p-0 create-project-main">
+					<div class="row p-5 border-bottom">
+						<div class="col-sm-12 col-md-12 col-xl-3">
+							<div class="form-group">
+								<label for="size-name" class="form-label text-muted">Tên size:</label>
+								<div class="input-group">
+									<input id="size-name" name="ten" type="text" class="form-control text-dark" placeholder="Enter ">
+								</div>
+							</div>
+						</div>
 
 
 
-<div class="container-fluid pt-4 px-4">
-                <div class="bg-light text-center rounded p-4">
-                    <div class="d-flex align-items-center justify-content-between mb-4">
-                        <h6 class="mb-0">Recent Salse</h6>
-                        <a href="">Show All</a>
-                    </div>
-                    <div class="table-responsive">
-                        <table class="table text-start align-middle table-bordered table-hover mb-0">
-                            <thead>
-                                <tr class="text-dark">
-                                    <!-- <th scope="col"><input class="form-check-input" type="checkbox"></th> -->
-                                    <th scope="col">ID</th>
-                                    <th scope="col">TÊN</th>
-                                    
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <!-- <td><input class="form-check-input" type="checkbox"></td> -->
-                                    <td style="width: 25%;"><input type="text" ></td>
-                                    <td>S</td>
-                                    
-                                    <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
-                                </tr>
-                                
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-</div>
+					<div class="row p-5">
+						<div class="btn-list text-end">
+							<button class="btn btn-outline-danger">
+								<i class="fe fe-x-circle"></i>
+								Cancel
+							</button>
 
+                            <button class="btn btn-outline-success">
+								<i class="fe fe-check-circle"></i>
+								Save
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</form>
+</html>
 @endsection
 @section('chon')
                     <a href="#" class="nav-item nav-link "><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
@@ -47,7 +56,7 @@
                             <a href="#" class="dropdown-item">Size</a>
                         </div>
                     </div> -->
-                    
+
                     <a href="{{ Route('San_Pham_Danh_Sach') }}" class="nav-item nav-link "><i class="fa fa-laptop me-2"></i>SẢN PHẨM</a>
                     <a href="{{ Route('Loai_Danh_Sach') }}" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>LOẠI</a>
                     <a href="{{ Route('Mau_Danh_Sach') }}" class="nav-item nav-link " ><i class="fa fa-table me-2"></i>MÀU</a>
